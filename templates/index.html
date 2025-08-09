@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZELNAB SYSTEM API SERVICE</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://i.gifer.com/7scs.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 25px 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border-bottom: 3px solid gold;
+            box-shadow: 0 0 25px gold;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            color: gold;
+            text-shadow: 0 0 15px gold, 0 0 30px gold;
+        }
+        h2 {
+            margin-top: 8px;
+            font-size: 1.2em;
+            color: #00ffe1;
+            text-shadow: 0 0 10px #00ffe1;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .api-card {
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .api-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+        }
+        .api-card h3 {
+            margin: 0 0 10px;
+            color: gold;
+        }
+        .api-card p {
+            font-size: 0.9em;
+            color: #ddd;
+        }
+        .btn {
+            background-color: gold;
+            border: none;
+            color: black;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #ffdb4d;
+        }
+        #copy-msg {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 128, 0, 0.9);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            display: none;
+            box-shadow: 0 0 15px green;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NABI SYSTEM API SERVICE HOŞ GELDİN :)</h1>
+        <h2>62 SORGULAMA - 58 AKTİF</h2>
+        <h3>Ilk 10 Apimiz yayindadir (yarin 17:00'da yeni 5 Api daha eklenicek;))<h3>
+        <h4>1Ömürlük Duom olan 301_ezellew Sunar ✈<h4>
+    </header>
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Ad Soyad Sorgu</h3>
+            <p>Kişinin ad ve soyad bilgilerini sorgular.</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/ad_soyad?ad=eymen&soyad=yavuz&il=&ilce=')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/ad_soyad?ad=eymen&soyad=yavuz&il=&ilce=')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Tc Gsm Api</h3>
+            <p>Kişinin Tc sinden Numara verileri getirir.</p>
+             <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/tc_gsm?tc=10727274684')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/tc_gsm?tc=10727274684')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Tc pro Api</h3>
+            <p>Kişinin Tc sinden sağlam sorgu yapar.</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/tc_pro_sorgulama?tc=10727274684')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/tc_pro_sorgulama?tc=10727274684')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Hayat Hikayesi Api</h3>
+            <p>Kişinin Tc sinden hayat hikayesini sorgular</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/hayat_hikayesi?tc=10727274684')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/hayat_hikayesi?tc=10727274684')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Ad Soyad Pro Api</h3>
+            <p>Kişinin ad ve soyad'indan sağlam sorgu yapar</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/ad_soyad_pro?tc=10727274684')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/ad_soyad_pro?tc=10727274684')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Is Yeri Api</h3>
+            <p>Kişinin Tc'sinden Is yeri bilgileri getirir.</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/is_yeri?tc=10727274684')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/is_yeri?tc=10727274684')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Vergi No Api</h3>
+            <p>Kişinin Vergi no sunu sorgular.</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/vergi_no?vergi=1234567890')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/vergi_no?vergi=1234567890')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Yaş Sorgulama Api</h3>
+            <p>Kişinin Tc'sinden yasini sorgular.</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/yas?tc=12345678901')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/yas?tc=12345678901')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Tc Pro Api</h3>
+            <p>Kişinin Tc'sinden Sağlam Sorgu yapar.</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/tc_pro_sorgulama?tc=12345678901')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/tc_pro_sorgulama?tc=12345678901')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+    <main>
+        <!-- API Kartı Örnek -->
+        <div class="api-card">
+            <h3>Gsm Tc</h3>
+            <p>Kişinin Numarasindan Tc sorgular.</p>
+            <button class="btn" onclick="copyToClipboard('https://ezelnabapi.onrender.com/ezelnabi/gsm_tc?gsm=5334431354')">Kopyala</button>
+            <button class="btn" onclick="goToApi('https://ezelnabapi.onrender.com/ezelnabi/gsm_tc?gsm=5334431354')">Git</button>
+        </div>
+    </main>
+
+    <div id="copy-msg">Kopyalandı ✅</div>
+
+
+
+    <script>
+        function copyToClipboard(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showCopyMessage();
+                }).catch(err => {
+                    alert("Kopyalama hatası: " + err);
+                });
+            } else {
+                let textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.top = "-999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showCopyMessage();
+                } catch (err) {
+                    alert("Kopyalama desteklenmiyor");
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+
+        function showCopyMessage() {
+            let msg = document.getElementById("copy-msg");
+            msg.style.display = "block";
+            setTimeout(() => { msg.style.display = "none"; }, 1500);
+        }
+
+        function goToApi(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
